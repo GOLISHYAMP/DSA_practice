@@ -11,17 +11,51 @@
 #         arr[i] = temp[i]
 # print(arr)
 
-arr = [1, 0, 2, 3, 2, 0, 0, 4, 5, 1]
+# arr = [1, 0, 2, 3, 2, 0, 0, 4, 5, 1]
 # for t in range(len(arr)-1):
 #     if arr[t] == 0 and arr[t+1] != 0:
 #         arr[t],arr[t+1] = arr[t+1],arr[t]
 # print(arr)
-i = 0
-j = 0
-n = len(arr)
-while(i< n and j < n):
-    while(arr[i] != 0):
-        i += 1
-        j = i + 1
+
+# n = len(arr)
+# for i in range(n):
+#     if arr[i] == 0:
+#         j = n-1
+#         while(j>i):
+#             if arr[j] != 0:
+#                 arr[i],arr[j] = arr[j],arr[i]
+#                 break
+#             else:
+#                 j -= 1
+# print(arr)
+
+
+
+
+def moveZeros(n,  a):
+    j = -1
+    for i in range(n):
+        if a[i] == 0:
+            j = i
+            break
+    
+    if j == -1:
+        return a
+
+    for i in range(j+1,n):
+        if arr[i] != 0:
+            arr[i],arr[j] = arr[j], arr[i]
+            j += 1
+    return a
+
+
+arr = [1, 0, 2, 3, 2, 0, 0, 4, 5, 1]
+n = 10
+ans = moveZeros(n, arr)
+for it in ans:
+    print(it, end=' ')
+print()
+
+
 
 
