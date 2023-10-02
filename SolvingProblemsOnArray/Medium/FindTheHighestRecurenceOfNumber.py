@@ -9,7 +9,7 @@ def findRecurence(num,n):
 
 
 if __name__ == "__main__":
-    arr = [12,22,22,121,34,54,26,725]
+    arr = [12,222,22,121,34,54,26,725]
     n = 2
     maxi = 0
     number = 0
